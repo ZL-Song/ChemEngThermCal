@@ -7,7 +7,7 @@ There is a binary executable in the ChemEngThermCal/bin folder, which in theory 
 
 All projects were intended to be OOP.
 There are ~20,000 lines of C# code.
-The GUI is based on WPF with customized controls, which I found very fancy.
+The GUI is based on customized controls, those fancy-looking controls are made with WPF.
 
 - ChemEngThermCal:         The main program, mostly the graphic interface and animations (advantages of WPF), also calls the algorithm;
 - ChemEngThermCal.Model:   Implements the algorithms, note that all comments are written in Chinese;
