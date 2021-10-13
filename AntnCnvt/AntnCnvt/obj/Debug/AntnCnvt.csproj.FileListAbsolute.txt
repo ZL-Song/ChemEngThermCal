@@ -1,0 +1,13 @@
+D:\VisualStudioWorkSpace\AntnCnvt\AntnCnvt\bin\Debug\AntnCnvt.exe
+D:\VisualStudioWorkSpace\AntnCnvt\AntnCnvt\bin\Debug\AntnCnvt.pdb
+D:\VisualStudioWorkSpace\AntnCnvt\AntnCnvt\obj\Debug\AntnCnvt.csprojResolveAssemblyReference.cache
+D:\VisualStudioWorkSpace\AntnCnvt\AntnCnvt\obj\Debug\MainWindow.g.cs
+D:\VisualStudioWorkSpace\AntnCnvt\AntnCnvt\obj\Debug\App.g.cs
+D:\VisualStudioWorkSpace\AntnCnvt\AntnCnvt\obj\Debug\AntnCnvt_MarkupCompile.cache
+D:\VisualStudioWorkSpace\AntnCnvt\AntnCnvt\obj\Debug\AntnCnvt_MarkupCompile.lref
+D:\VisualStudioWorkSpace\AntnCnvt\AntnCnvt\obj\Debug\MainWindow.baml
+D:\VisualStudioWorkSpace\AntnCnvt\AntnCnvt\obj\Debug\AntnCnvt.g.resources
+D:\VisualStudioWorkSpace\AntnCnvt\AntnCnvt\obj\Debug\AntnCnvt.Properties.Resources.resources
+D:\VisualStudioWorkSpace\AntnCnvt\AntnCnvt\obj\Debug\AntnCnvt.csproj.GenerateResource.Cache
+D:\VisualStudioWorkSpace\AntnCnvt\AntnCnvt\obj\Debug\AntnCnvt.exe
+D:\VisualStudioWorkSpace\AntnCnvt\AntnCnvt\obj\Debug\AntnCnvt.pdb
