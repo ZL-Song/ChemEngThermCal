@@ -15,7 +15,7 @@ namespace ChemEngThermCal {
 
 
         public DBConnection() {
-            string conString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\cetcdbtest.mdb";
+            string conString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\cetcdb.mdb";
             using (OleDbConnection cn = new OleDbConnection()) {
                 cn.ConnectionString = conString;
                 cn.Open();
