@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="abt_BaseOn" xml:space="preserve">
+    <value>Basing On</value>
+  </data>
+  <data name="abt_ContactUs" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="abt_Cop" xml:space="preserve">
+    <value>Cooperation</value>
+  </data>
+  <data name="abt_Cop1" xml:space="preserve">
+    <value>If you want to contribute to ChemEngThermCal,</value>
+  </data>
+  <data name="abt_Cop2" xml:space="preserve">
+    <value>or need our assistance in your own project,</value>
+  </data>
+  <data name="abt_Cop3" xml:space="preserve">
+    <value>welcome to contact us.</value>
+  </data>
+  <data name="abt_MainContribut" xml:space="preserve">
+    <value>Main Contributors</value>
+  </data>
+  <data name="abt_PoweredBy" xml:space="preserve">
+    <value>Powered by Project ChemEngThermCal</value>
+  </data>
+  <data name="abt_State" xml:space="preserve">
+    <value>Statement</value>
+  </data>
+  <data name="abt_State1" xml:space="preserve">
+    <value>This Program is for research and learning purpose only.</value>
+  </data>
+  <data name="abt_State2" xml:space="preserve">
+    <value>Report of unfixed bugs and suggestions are always welcome.</value>
+  </data>
+  <data name="abt_SZL" xml:space="preserve">
+    <value>Zilin Song, W.I.T.</value>
+  </data>
+  <data name="abt_UIBaseOn" xml:space="preserve">
+    <value>UI Powered By</value>
+  </data>
+  <data name="abt_UX" xml:space="preserve">
+    <value>UX Design</value>
+  </data>
+  <data name="abt_XAG" xml:space="preserve">
+    <value>Aiguo Xuan, W.I.T.</value>
+  </data>
+  <data name="atn_exp1" xml:space="preserve">
+    <value>Expression I</value>
+  </data>
+  <data name="atn_exp2" xml:space="preserve">
+    <value>Expression II</value>
+  </data>
+  <data name="atn_exp3" xml:space="preserve">
+    <value>Expression III</value>
+  </data>
+  <data name="ceos_Ceos" xml:space="preserve">
+    <value>Cubic EOS Type</value>
+  </data>
+  <data name="cfg_Lang" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="cfg_Save" xml:space="preserve">
+    <value>Save Changes</value>
+  </data>
+  <data name="cm_abort" xml:space="preserve">
+    <value>Abort</value>
+  </data>
+  <data name="cm_calc" xml:space="preserve">
+    <value>Calculate</value>
+  </data>
+  <data name="cm_calproc" xml:space="preserve">
+    <value>Calculate Process</value>
+  </data>
+  <data name="cm_cdts" xml:space="preserve">
+    <value>Conditions</value>
+  </data>
+  <data name="cm_chem1" xml:space="preserve">
+    <value>Component - 1</value>
+  </data>
+  <data name="cm_chem2" xml:space="preserve">
+    <value>Component - 2</value>
+  </data>
+  <data name="cm_chemProp" xml:space="preserve">
+    <value>Chemical &amp; Properties</value>
+  </data>
+  <data name="cm_continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="cm_dbCon" xml:space="preserve">
+    <value>Get Data</value>
+  </data>
+  <data name="cm_exp" xml:space="preserve">
+    <value>Expression of Equation</value>
+  </data>
+  <data name="cm_Method" xml:space="preserve">
+    <value>Method</value>
+  </data>
+  <data name="cm_rst" xml:space="preserve">
+    <value>Results</value>
+  </data>
+  <data name="dbc_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="dbc_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="gceCom_1" xml:space="preserve">
+    <value>Inquire the Compressibility Factor Diagram via the known</value>
+  </data>
+  <data name="gceCom_2" xml:space="preserve">
+    <value>And input</value>
+  </data>
+  <data name="gceP_Method" xml:space="preserve">
+    <value>Method of Calculation</value>
+  </data>
+  <data name="gce_SecV" xml:space="preserve">
+    <value>Using 2nd Virial coefficient</value>
+  </data>
+  <data name="gce_Z" xml:space="preserve">
+    <value>Using compressibility factor</value>
+  </data>
+  <data name="mvlest_ideal" xml:space="preserve">
+    <value>Ideal Model</value>
+  </data>
+  <data name="mvlest_real" xml:space="preserve">
+    <value>Realistic Model</value>
+  </data>
+  <data name="mvlest_semi" xml:space="preserve">
+    <value>Semi-Ideal Model</value>
+  </data>
+  <data name="mvlest_title" xml:space="preserve">
+    <value>Vapor - Liquid Equibrium Models</value>
+  </data>
+  <data name="mvle_actmodel" xml:space="preserve">
+    <value>Activity Model</value>
+  </data>
+  <data name="mvle_Antoine" xml:space="preserve">
+    <value>Antoine Constants</value>
+  </data>
+  <data name="mvle_fugmodel" xml:space="preserve">
+    <value>Fugacity Model</value>
+  </data>
+  <data name="mvle_isobaricBubble" xml:space="preserve">
+    <value>Isobaric Bubble Point</value>
+  </data>
+  <data name="mvle_isobaricDew" xml:space="preserve">
+    <value>Isobaric Dew Point</value>
+  </data>
+  <data name="mvle_isothermBubble" xml:space="preserve">
+    <value>Isothermal Bubble Point</value>
+  </data>
+  <data name="mvle_isothermDew" xml:space="preserve">
+    <value>Isothermal Dew Point</value>
+  </data>
+  <data name="mvle_objtitle" xml:space="preserve">
+    <value>Objective &amp; Model</value>
+  </data>
+  <data name="mvle_prop" xml:space="preserve">
+    <value>Properties of Fluid Mixture</value>
+  </data>
+  <data name="mw_Abt" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="mw_AbtVc" xml:space="preserve">
+    <value>Info. About Us &amp; ChemEngThermCal.</value>
+  </data>
+  <data name="mw_Ceos" xml:space="preserve">
+    <value>Cubic E.O.S.</value>
+  </data>
+  <data name="mw_CeosVc" xml:space="preserve">
+    <value>Van der Waals, RK, SRK, PR.</value>
+  </data>
+  <data name="mw_Cfg" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="mw_CfgVc" xml:space="preserve">
+    <value>Configure ChemEngThermCal.</value>
+  </data>
+  <data name="mw_Ctrl" xml:space="preserve">
+    <value>Control</value>
+  </data>
+  <data name="mw_Db" xml:space="preserve">
+    <value>Chemical DataBase</value>
+  </data>
+  <data name="mw_DbStt" xml:space="preserve">
+    <value>Database State : </value>
+  </data>
+  <data name="mw_DbVc" xml:space="preserve">
+    <value>See about the chemical property database.</value>
+  </data>
+  <data name="mw_Err_1" xml:space="preserve">
+    <value>Input Error : Please specify the model to calculate. Select one of the Radio Buttons.</value>
+  </data>
+  <data name="mw_Err_2" xml:space="preserve">
+    <value>Input Error : Please specify the model to calculate. Blank selection of the Combo Box.</value>
+  </data>
+  <data name="mw_Err_3" xml:space="preserve">
+    <value>Input Error : Please specify the model to calculate. Check input in the Textbox.</value>
+  </data>
+  <data name="mw_Gc" xml:space="preserve">
+    <value>Generalized Correlation</value>
+  </data>
+  <data name="mw_GcVc" xml:space="preserve">
+    <value>Second virial coefficient etc.</value>
+  </data>
+  <data name="mw_Inil" xml:space="preserve">
+    <value>Initializing...</value>
+  </data>
+  <data name="mw_Mf" xml:space="preserve">
+    <value>Multicomponent Mixtures</value>
+  </data>
+  <data name="mw_Of" xml:space="preserve">
+    <value>Other Functions</value>
+  </data>
+  <data name="mw_OfVc" xml:space="preserve">
+    <value>More attached calculations</value>
+  </data>
+  <data name="mw_Pf" xml:space="preserve">
+    <value>One Component System</value>
+  </data>
+  <data name="mw_Rgm" xml:space="preserve">
+    <value>Gas Mixing Rule</value>
+  </data>
+  <data name="mw_RgmVc" xml:space="preserve">
+    <value>E.O.S. and Kay's rule.</value>
+  </data>
+  <data name="mw_Vle" xml:space="preserve">
+    <value>Vapor - Liquid Equilibrium</value>
+  </data>
+  <data name="mw_VleMfVc" xml:space="preserve">
+    <value>For mixed fluid using E.O.S and activity.</value>
+  </data>
+  <data name="mw_VlePfVc" xml:space="preserve">
+    <value>For pure fluid using E.O.S method.</value>
+  </data>
+  <data name="ofst_antoine" xml:space="preserve">
+    <value>Antoine Equation</value>
+  </data>
+  <data name="ofst_gceCalP" xml:space="preserve">
+    <value>Generalized correlations</value>
+  </data>
+  <data name="ofst_gceCalPDetail" xml:space="preserve">
+    <value>Pressure calculation using generalized correlations</value>
+  </data>
+  <data name="ofst_rackett" xml:space="preserve">
+    <value>Rackett Equation</value>
+  </data>
+  <data name="ofst_title" xml:space="preserve">
+    <value>Other Functions</value>
+  </data>
+  <data name="pvle_isobaric" xml:space="preserve">
+    <value>Isobaric</value>
+  </data>
+  <data name="pvle_isothermal" xml:space="preserve">
+    <value>Isothemal</value>
+  </data>
+  <data name="rgm_binK" xml:space="preserve">
+    <value>Binary Interaction Index K =</value>
+  </data>
+  <data name="rgm_Ceos" xml:space="preserve">
+    <value>Cubic E.O.S. mix rule</value>
+  </data>
+  <data name="rgm_Kay" xml:space="preserve">
+    <value>Kay's rule</value>
+  </data>
+  <data name="rgm_MixModel" xml:space="preserve">
+    <value>Mix Model</value>
+  </data>
+  <data name="rgm_Prop" xml:space="preserve">
+    <value>Properties of Gas Mixture</value>
+  </data>
+  <data name="rgm_SecV" xml:space="preserve">
+    <value>Second virial coefficient mix rule</value>
+  </data>
+  <data name="stt_trytab" xml:space="preserve">
+    <value>Try Tabs On The Left.</value>
+  </data>
+  <data name="dbmng_db404" xml:space="preserve">
+    <value>Can not find database file "cetcdb.mdb"</value>
+  </data>
+  <data name="abt_XL" xml:space="preserve">
+    <value>Li Xiang, W.I.T.</value>
+  </data>
+  <data name="abt_YZG" xml:space="preserve">
+    <value>Zhiguo Yan, W.I.T.</value>
+  </data>
+</root>
