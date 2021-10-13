@@ -1,0 +1,64 @@
+﻿<Page x:Class="ChemEngThermCal.View.PfGceCalvView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ChemEngThermCal.View"
+      xmlns:ccresx="clr-namespace:ChemEngThermCal.Controls;assembly=ChemEngThermCal.Controls" 
+      xmlns:props="clr-namespace:ChemEngThermCal.Properties"
+      mc:Ignorable="d" 
+      Title="pfGceCalvView" Loaded="Page_Loaded">
+    <Grid x:Uid="Grid_1" Margin="25">
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition x:Uid="ColumnDefinition_1" MinWidth="370" Width="Auto"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_2" Width="25"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_3" />
+        </Grid.ColumnDefinitions>
+        <ScrollViewer x:Uid="ScrollViewer_1" >
+            <StackPanel x:Uid="StackPanel_1" >
+                <GroupBox x:Uid="GroupBox_1" Header="{x:Static props:Resources.cm_Method}">
+                    <ccresx:HeaderComboBox x:Uid="hcbCalMethod" x:Name="hcbCalMethod" Header="{x:Static props:Resources.cm_Method}">
+                        <ComboBoxItem x:Uid="ComboBoxItem_1" Content="{x:Static props:Resources.gce_SecV}"/>
+                        <ComboBoxItem x:Uid="ComboBoxItem_2" Content="{x:Static props:Resources.gce_Z}"/>
+                    </ccresx:HeaderComboBox>
+                </GroupBox>
+                <GroupBox x:Uid="GroupBox_2" Header="{x:Static props:Resources.cm_chemProp}">
+                    <StackPanel x:Uid="StackPanel_2" >
+                        <Button x:Uid="Button_1" x:Name="DbBtnCon" Content="{x:Static props:Resources.cm_dbCon}" Click="DbBtnCon_Click" />
+                        <ccresx:NumberTextBox x:Uid="ntbTc" x:Name="ntbTc" LeadingContent="Tc =" FollowingContent="K"/>
+                        <ccresx:NumberTextBox x:Uid="ntbPc" x:Name="ntbPc" LeadingContent="Pc =" FollowingContent="MPa"/>
+                        <ccresx:NumberTextBox x:Uid="ntbW" x:Name="ntbW" LeadingContent="ω =" />
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox x:Uid="GroupBox_3" Header="{x:Static props:Resources.cm_cdts}">
+                    <StackPanel x:Uid="StackPanel_3" >
+                        <ccresx:NumberTextBox x:Uid="ntbT" x:Name="ntbT" LeadingContent="T =" FollowingContent="K"/>
+                        <ccresx:NumberTextBox x:Uid="ntbP" x:Name="ntbP" LeadingContent="P =" FollowingContent="MPa" />
+                    </StackPanel>
+                </GroupBox>
+                <StackPanel x:Uid="StackPanel_4" >
+                    <Button x:Uid="btnCal" x:Name="btnCal" Content="{x:Static props:Resources.cm_calc}" Style="{DynamicResource CalButtonStyle}" Click="btnCal_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer >
+        <Grid x:Uid="grdResult" x:Name="grdResult" Grid.Column="2">
+            <Grid.RowDefinitions >
+                <RowDefinition x:Uid="RowDefinition_1" Height="Auto"/>
+                <RowDefinition x:Uid="RowDefinition_2" />
+            </Grid.RowDefinitions>
+            <GroupBox x:Uid="groupBox" x:Name="groupBox" Header="{x:Static props:Resources.cm_rst}" IsEnabled="False" >
+                <StackPanel x:Uid="StackPanel_5" >
+                    <ccresx:NumberTextBox x:Uid="ntbResultV" x:Name="ntbResultV" LeadingContent="V =" FollowingContent="cm³/mol"/>
+                    <ccresx:NumberTextBox x:Uid="ntbResultZ" x:Name="ntbResultZ" LeadingContent="Z =" />
+                    <ccresx:NumberTextBox x:Uid="ntbResultTr" x:Name="ntbResultTr" LeadingContent="Tr =" />
+                    <ccresx:NumberTextBox x:Uid="ntbResultPr" x:Name="ntbResultPr" LeadingContent="Pr =" />
+                    <ccresx:NumberTextBox x:Uid="ntbResultB0" x:Name="ntbResultB0" LeadingContent="Bº =" Visibility="{Binding Visibility, ElementName=ntbResultB}"/>
+                    <ccresx:NumberTextBox x:Uid="ntbResultB1" x:Name="ntbResultB1" LeadingContent="B¹ =" Visibility="{Binding Visibility, ElementName=ntbResultB}" />
+                    <ccresx:NumberTextBox x:Uid="ntbResultB" x:Name="ntbResultB" LeadingContent="B =" />
+                    <ccresx:NumberTextBox x:Uid="ntbResultZ0" x:Name="ntbResultZ0" LeadingContent="Zº =" />
+                    <ccresx:NumberTextBox x:Uid="ntbResultZ1" x:Name="ntbResultZ1" LeadingContent="Z¹ =" />
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+    </Grid>
+</Page>

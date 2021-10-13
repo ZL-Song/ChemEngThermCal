@@ -1,0 +1,26 @@
+﻿<Page x:Uid="Page_1" x:Class="ChemEngThermCal.View.DbMngView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ChemEngThermCal.View"
+      xmlns:props="clr-namespace:ChemEngThermCal.Properties"
+      mc:Ignorable="d" 
+      Title="DatabaseMngView" Loaded="Page_Loaded">
+    <Grid x:Uid="Grid_1" Margin="25" >
+        <Label x:Name="lblNoDb" Content="{x:Static props:Resources.dbmng_db404}" FontSize="36" Foreground="{DynamicResource uiLightBlueSolidColorBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,150" />
+        <ListView x:Name="lstChem" ItemsSource="{Binding Chemical}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding EngName}" Width="130"/>
+                    <GridViewColumn Header="名称" DisplayMemberBinding="{Binding ChnName}" Width="130"/>
+                    <GridViewColumn Header="Tc / K" DisplayMemberBinding="{Binding Tc}"/>
+                    <GridViewColumn Header="Pc / MPa" DisplayMemberBinding="{Binding Pc}"/>
+                    <GridViewColumn Header="ω" DisplayMemberBinding="{Binding w}"/>
+                    <GridViewColumn Header="Zc" DisplayMemberBinding="{Binding Zc}"/>
+                    <GridViewColumn Header="Vc / cm³/mol" DisplayMemberBinding="{Binding Vc}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Page>

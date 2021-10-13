@@ -1,0 +1,35 @@
+﻿<Page x:Uid="Page_1" x:Class="ChemEngThermCal.View.ConfigView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:props="clr-namespace:ChemEngThermCal.Properties"
+      xmlns:ccresx="clr-namespace:ChemEngThermCal.Controls;assembly=ChemEngThermCal.Controls" 
+      xmlns:prop="clr-namespace:ChemEngThermCal.Properties"
+      mc:Ignorable="d" 
+      Title="ConfigurationView" Loaded="Page_Loaded">
+    <Grid x:Uid="Grid_1" Margin="25">
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition x:Uid="ColumnDefinition_1" MinWidth="370" Width="Auto"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_2" Width="25"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_3" />
+        </Grid.ColumnDefinitions>
+        <Grid x:Uid="Grid_2">
+            <Grid.RowDefinitions>
+                <RowDefinition x:Uid="RowDefinition_1" />
+                <RowDefinition x:Uid="RowDefinition_2" Height="Auto"/>
+            </Grid.RowDefinitions>
+            <ScrollViewer x:Uid="ScrollViewer_1">
+                <StackPanel x:Uid="StackPanel_1">
+                    <ccresx:HeaderComboBox x:Uid="hcbLang" x:Name="hcbLang" Header="{x:Static prop:Resources.cfg_Lang}">
+                        <ComboBoxItem >English</ComboBoxItem>
+                        <ComboBoxItem >简体中文</ComboBoxItem>
+                    </ccresx:HeaderComboBox>
+                </StackPanel>
+            </ScrollViewer>
+            <StackPanel x:Uid="StackPanel_2" Grid.Row="1" >
+                <Button x:Uid="btnSave" x:Name="btnSave" Content="{x:Static prop:Resources.cfg_Save}" Style="{DynamicResource CalButtonStyle}" Click="btnSave_Click" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

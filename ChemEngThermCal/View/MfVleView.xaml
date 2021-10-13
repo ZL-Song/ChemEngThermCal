@@ -1,0 +1,255 @@
+﻿<Page x:Uid="Page_1" x:Class="ChemEngThermCal.View.MfVleView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:ccresx="clr-namespace:ChemEngThermCal.Controls;assembly=ChemEngThermCal.Controls" 
+      xmlns:props="clr-namespace:ChemEngThermCal.Properties"
+      mc:Ignorable="d" Loaded="Page_Loaded">
+    <Grid x:Uid="Grid_1">
+        <Button x:Uid="btnBack" x:Name="btnBack" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnBack_Click" Opacity="0" Background="{DynamicResource uiMediumGraySolidColorBrush}" MinHeight="0" Height="25">
+            <Path x:Uid="PART_Path" x:Name="PART_Path" Data="M5,0 0,5 5,10" Stroke="{DynamicResource uiLightBlueSolidColorBrush}" StrokeThickness="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="16,0,0,0" />
+        </Button>
+        <Grid x:Uid="Grid_2" Margin="25">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition x:Uid="ColumnDefinition_1" MinWidth="370" Width="Auto"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_2" Width="25"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_3" />
+            </Grid.ColumnDefinitions>
+            <ScrollViewer x:Uid="ScrollViewer_1">
+                <StackPanel x:Uid="StackPanel_1">
+                    <GroupBox x:Uid="GroupBox_1" Header="{x:Static props:Resources.mvle_objtitle}" >
+                        <StackPanel x:Uid="StackPanel_2" >
+                            <RadioButton x:Uid="rbtIsothermalBubble" x:Name="rbtIsothermalBubble" Checked="RadioButtonChecked" Content="{x:Static props:Resources.mvle_isothermBubble}"/>
+                            <RadioButton x:Uid="rbtIsothermalDew" x:Name="rbtIsothermalDew" Checked="RadioButtonChecked" Content="{x:Static props:Resources.mvle_isothermDew}"/>
+                            <RadioButton x:Uid="rbtIsobaricBubble" x:Name="rbtIsobaricBubble" Checked="RadioButtonChecked" Content="{x:Static props:Resources.mvle_isobaricBubble}"/>
+                            <RadioButton x:Uid="rbtIsobaricDew" x:Name="rbtIsobaricDew" Checked="RadioButtonChecked"  Content="{x:Static props:Resources.mvle_isobaricDew}"/>
+                            <ccresx:HeaderComboBox x:Uid="hcbActivity" x:Name="hcbActivity" Header="{x:Static props:Resources.mvle_actmodel}" SelectionChanged="hcbActivity_SelectionChanged">
+                                <ComboBoxItem x:Uid="ComboBoxItem_1">Margules</ComboBoxItem>
+                                <ComboBoxItem x:Uid="ComboBoxItem_2">Van Laar</ComboBoxItem>
+                                <ComboBoxItem x:Uid="ComboBoxItem_3">Wilson (Model Parameters)</ComboBoxItem>
+                                <ComboBoxItem x:Uid="ComboBoxItem_4">Wilson (Energy Parameters)</ComboBoxItem>
+                                <ComboBoxItem x:Uid="ComboBoxItem_5">NRTL</ComboBoxItem>
+                            </ccresx:HeaderComboBox>
+                            <ccresx:NumberTextBox x:Uid="ntbChemical_1_Margules" x:Name="ntbChemical_1_Margules" LeadingContent="A₁₂ = " Visibility="Collapsed" />
+                            <ccresx:NumberTextBox x:Uid="ntbChemical_2_Margules" x:Name="ntbChemical_2_Margules" LeadingContent="A₂₁ = " Visibility="{Binding Visibility, ElementName=ntbChemical_1_Margules}" Height="{Binding Height,ElementName=ntbChemical_1_Margules}"/>
+                            <ccresx:NumberTextBox x:Uid="ntbChemical_1_Vanlaar" x:Name="ntbChemical_1_Vanlaar" LeadingContent="A₁₂ = " Visibility="Collapsed" />
+                            <ccresx:NumberTextBox x:Uid="ntbChemical_2_Vanlaar" x:Name="ntbChemical_2_Vanlaar" LeadingContent="A₂₁ = " Visibility="{Binding Visibility, ElementName=ntbChemical_1_Vanlaar}" Height="{Binding Height,ElementName=ntbChemical_1_Vanlaar}"/>
+                            <ccresx:NumberTextBox x:Uid="ntbChemical_1_WilsonModel" x:Name="ntbChemical_1_WilsonModel" LeadingContent="Λ₁₂ = " Visibility="Collapsed" />
+                            <ccresx:NumberTextBox x:Uid="ntbChemical_2_WilsonModel" x:Name="ntbChemical_2_WilsonModel" LeadingContent="Λ₂₁ = " Visibility="{Binding Visibility, ElementName=ntbChemical_1_WilsonModel}" Height="{Binding Height,ElementName=ntbChemical_1_WilsonModel}"/>
+                            <ccresx:NumberTextBox x:Uid="ntbChemical_1_WilsonEnergy" x:Name="ntbChemical_1_WilsonEnergy" LeadingContent="(λ₁₂ - λ₁₁) = " FollowingContent="J/mol" Visibility="Collapsed"/>
+                            <ccresx:NumberTextBox x:Uid="ntbChemical_2_WilsonEnergy" x:Name="ntbChemical_2_WilsonEnergy" LeadingContent="(λ₂₁ - λ₂₂) = " FollowingContent="J/mol" Visibility="{Binding Visibility, ElementName=ntbChemical_1_WilsonEnergy}" Height="{Binding Height,ElementName=ntbChemical_1_WilsonEnergy}"/>
+                            <ccresx:NumberTextBox x:Uid="ntbChemical_1_Ntrl" x:Name="ntbChemical_1_Ntrl" LeadingContent="(g₁₂ - g₁₁) = " Visibility="Collapsed" />
+                            <ccresx:NumberTextBox x:Uid="ntbChemical_2_Ntrl" x:Name="ntbChemical_2_Ntrl" LeadingContent="(g₂₁ - g₂₂) = " Visibility="{Binding Visibility, ElementName=ntbChemical_1_Ntrl}" Height="{Binding Height,ElementName=ntbChemical_1_Ntrl}"/>
+                            <ccresx:NumberTextBox x:Uid="ntbAlpha_Ntrl" x:Name="ntbAlpha_Ntrl" LeadingContent="α = " Visibility="{Binding Visibility, ElementName=ntbChemical_1_Ntrl}" Height="{Binding Height,ElementName=ntbChemical_1_Ntrl}"/>
+                            <ccresx:HeaderComboBox x:Uid="hcbFugacity" Header="{x:Static props:Resources.mvle_fugmodel}" x:Name="hcbFugacity" >
+                                <ComboBoxItem x:Uid="ComboBoxItem_6">Redlich - Kwong</ComboBoxItem>
+                                <ComboBoxItem x:Uid="ComboBoxItem_7">Soave - Redlich - Kwong</ComboBoxItem>
+                                <ComboBoxItem x:Uid="ComboBoxItem_8">Peng - Robinson</ComboBoxItem>
+                                <ComboBoxItem x:Uid="ComboBoxItem_9">2nd Virial Coefficient</ComboBoxItem>
+                            </ccresx:HeaderComboBox>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox x:Uid="GroupBox_2" Header="{x:Static props:Resources.mvle_prop}" >
+                        <Grid x:Uid="Grid_3">
+                            <Grid.RowDefinitions>
+                                <RowDefinition x:Uid="RowDefinition_1" Height="Auto"/>
+                                <RowDefinition x:Uid="RowDefinition_2" Height="Auto"/>
+                                <RowDefinition x:Uid="RowDefinition_3" Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions >
+                                <ColumnDefinition x:Uid="ColumnDefinition_4" />
+                                <ColumnDefinition x:Uid="ColumnDefinition_5" Width="10"/>
+                                <ColumnDefinition x:Uid="ColumnDefinition_6" />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel x:Uid="StackPanel_3" >
+                                <Label x:Uid="Label_1" Content="{x:Static props:Resources.cm_chem1}" FontSize="16"/>
+                                <ccresx:NumberTextBox x:Uid="ntbChemical_1_x" x:Name="ntbChemical_1_x" LeadingContent="x =" LostFocus="ntbChemicalMoleFrac_LostFocus" Visibility="Collapsed"/>
+                                <ccresx:NumberTextBox x:Uid="ntbChemical_1_y" x:Name="ntbChemical_1_y" LeadingContent="y =" LostFocus="ntbChemicalMoleFrac_LostFocus" Visibility="Collapsed"/>
+                                <Button x:Name="btnDbCon_1" x:Uid="Button_1" Content="{x:Static props:Resources.cm_dbCon}"  Click="DbBtnCon_Click"/>
+                                <ccresx:NumberTextBox x:Uid="ntbChemical_1_Tc" x:Name="ntbChemical_1_Tc" LeadingContent="Tc =" FollowingContent="K" />
+                                <ccresx:NumberTextBox x:Uid="ntbChemical_1_Pc" x:Name="ntbChemical_1_Pc" LeadingContent="Pc =" FollowingContent="MPa" />
+                                <ccresx:NumberTextBox x:Uid="ntbChemical_1_w" x:Name="ntbChemical_1_w" LeadingContent="ω =" />
+                            </StackPanel>
+                            <StackPanel x:Uid="StackPanel_4" Grid.Column="2">
+                                <Label x:Uid="Label_2" Content="{x:Static props:Resources.cm_chem2}" FontSize="16"/>
+                                <ccresx:NumberTextBox x:Uid="ntbChemical_2_x" x:Name="ntbChemical_2_x" LeadingContent="x =" LostFocus="ntbChemicalMoleFrac_LostFocus" Visibility="{Binding Visibility, ElementName=ntbChemical_1_x}" Height="{Binding Height,ElementName=ntbChemical_1_x}"/>
+                                <ccresx:NumberTextBox x:Uid="ntbChemical_2_y" x:Name="ntbChemical_2_y" LeadingContent="y =" LostFocus="ntbChemicalMoleFrac_LostFocus" Visibility="{Binding Visibility, ElementName=ntbChemical_1_y}" Height="{Binding Height,ElementName=ntbChemical_1_y}"/>
+                                <Button x:Name="btnDbCon_2" x:Uid="Button_2" Content="{x:Static props:Resources.cm_dbCon}" Click="DbBtnCon_Click"/>
+                                <ccresx:NumberTextBox x:Uid="ntbChemical_2_Tc" x:Name="ntbChemical_2_Tc" LeadingContent="Tc =" FollowingContent="K" />
+                                <ccresx:NumberTextBox x:Uid="ntbChemical_2_Pc" x:Name="ntbChemical_2_Pc" LeadingContent="Pc =" FollowingContent="MPa"/>
+                                <ccresx:NumberTextBox x:Uid="ntbChemical_2_w" x:Name="ntbChemical_2_w" LeadingContent="ω =" />
+                            </StackPanel>
+                            <StackPanel x:Uid="StackPanel_5" Grid.Row="1" Grid.ColumnSpan="3">
+                                <Label x:Uid="hcbAntoineUnit" x:Name="hcbAntoineUnit" Content="{x:Static props:Resources.mvle_Antoine}"/>
+                                <Image x:Uid="imgMPaKState" x:Name="imgMPaKState" Source="/ChemEngThermCal;component/Resx/Dictionary/Pic/AntoineEquationMPaK.png" Height="42" />
+                            </StackPanel>
+                            <StackPanel x:Uid="StackPanel_6" Grid.Row="2">
+                                <ccresx:NumberTextBox x:Uid="ntbChemical_1_A" x:Name="ntbChemical_1_A" LeadingContent="A ="/>
+                                <ccresx:NumberTextBox x:Uid="ntbChemical_1_B" x:Name="ntbChemical_1_B" LeadingContent="B ="/>
+                                <ccresx:NumberTextBox x:Uid="ntbChemical_1_C" x:Name="ntbChemical_1_C" LeadingContent="C ="/>
+                            </StackPanel>
+                            <StackPanel x:Uid="StackPanel_7" Grid.Row="2"  Grid.Column="2">
+                                <ccresx:NumberTextBox x:Uid="ntbChemical_2_A" x:Name="ntbChemical_2_A" LeadingContent="A ="/>
+                                <ccresx:NumberTextBox x:Uid="ntbChemical_2_B" x:Name="ntbChemical_2_B" LeadingContent="B ="/>
+                                <ccresx:NumberTextBox x:Uid="ntbChemical_2_C" x:Name="ntbChemical_2_C" LeadingContent="C ="/>
+                            </StackPanel>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox x:Uid="GroupBox_3" Header="{x:Static props:Resources.cm_cdts}" >
+                        <StackPanel x:Uid="StackPanel_8" >
+                            <ccresx:NumberTextBox x:Uid="ntbT" x:Name="ntbT" LeadingContent="T =" FollowingContent="K" Visibility="Collapsed"/>
+                            <ccresx:NumberTextBox x:Uid="ntbP" x:Name="ntbP" LeadingContent="P =" FollowingContent="MPa" Visibility="Collapsed"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <StackPanel x:Uid="StackPanel_9" Grid.Row="1" >
+                        <Button x:Uid="btnCal" x:Name="btnCal" Content="{x:Static props:Resources.cm_calc}" Click="btnCal_Click" Style="{DynamicResource CalButtonStyle}" />
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+            <Grid x:Uid="grdResult" x:Name="grdResult" Grid.Column="2" >
+                <Grid.RowDefinitions >
+                    <RowDefinition x:Uid="RowDefinition_4" Height="Auto"/>
+                    <RowDefinition x:Uid="RowDefinition_5"/>
+                </Grid.RowDefinitions>
+                <GroupBox x:Uid="groupBox" x:Name="groupBox" Header="{x:Static props:Resources.cm_rst}" IsEnabled="False">
+                    <StackPanel x:Uid="StackPanel_10">
+                        <ccresx:NumberTextBox x:Uid="ntbResultTemperature" x:Name="ntbResultTemperature" LeadingContent="T =" FollowingContent="K" Visibility="{Binding Visibility, ElementName=ntbP}"/>
+                        <ccresx:NumberTextBox x:Uid="ntbResultPressure" x:Name="ntbResultPressure" LeadingContent="P =" FollowingContent="MPa" Visibility="{Binding Visibility, ElementName=ntbT}"/>
+                        <Grid x:Uid="Grid_4" Grid.Row="1">
+                            <Grid.ColumnDefinitions >
+                                <ColumnDefinition x:Uid="ColumnDefinition_7" />
+                                <ColumnDefinition x:Uid="ColumnDefinition_8" Width="10"/>
+                                <ColumnDefinition x:Uid="ColumnDefinition_9" />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel x:Uid="StackPanel_11" >
+                                <Label x:Uid="Label_3" Content="{x:Static props:Resources.cm_chem1}" FontSize="16" Foreground="{DynamicResource uiLightGrayForTextSolidColorBrush}"/>
+                                <ccresx:NumberTextBox x:Uid="ntbResultLiqMF1" x:Name="ntbResultLiqMF1" LeadingContent="x =" Visibility="{Binding Visibility, ElementName=ntbChemical_1_y}" />
+                                <ccresx:NumberTextBox x:Uid="ntbResultGasMF1" x:Name="ntbResultGasMF1" LeadingContent="y =" Visibility="{Binding Visibility, ElementName=ntbChemical_1_x}" />
+                            </StackPanel>
+                            <StackPanel x:Uid="StackPanel_12" Grid.Column="2">
+                                <Label x:Uid="Label_4" Content="{x:Static props:Resources.cm_chem2}" FontSize="16" Foreground="{DynamicResource uiLightGrayForTextSolidColorBrush}"/>
+                                <ccresx:NumberTextBox x:Uid="ntbResultLiqMF2" x:Name="ntbResultLiqMF2" LeadingContent="x =" Visibility="{Binding Visibility, ElementName=ntbChemical_1_y}" />
+                                <ccresx:NumberTextBox x:Uid="ntbResultGasMF2" x:Name="ntbResultGasMF2" LeadingContent="y =" Visibility="{Binding Visibility, ElementName=ntbChemical_1_x}" />
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox x:Uid="GroupBox_4" Header="{x:Static props:Resources.cm_calproc}" Grid.Row="1" Background="{Binding Background, ElementName=groupBox}">
+                    <RichTextBox x:Uid="rtbOutPut" x:Name="rtbOutPut">
+                        <FlowDocument x:Uid="FlowDocument_1" IsOptimalParagraphEnabled="True" PageWidth="2048" >
+                            <Table x:Uid="tblKnownMixture" x:Name="tblKnownMixture">
+                                <Table.Columns>
+                                    <TableColumn x:Uid="TableColumn_1" Width="130"/>
+                                    <TableColumn x:Uid="TableColumn_2" Width="100"/>
+                                    <TableColumn x:Uid="TableColumn_3" Width="100"/>
+                                </Table.Columns>
+                                <TableRowGroup x:Uid="TableRowGroup_1" >
+                                    <!-- Chem -->
+                                    <TableRow x:Uid="TableRow_1">
+                                        <TableCell x:Uid="TableCell_1" />
+                                        <TableCell x:Uid="TableCell_2" >
+                                            <Paragraph x:Uid="Paragraph_1">Component - 1</Paragraph>
+                                        </TableCell>
+                                        <TableCell x:Uid="TableCell_3" >
+                                            <Paragraph x:Uid="Paragraph_2">Component - 2</Paragraph>
+                                        </TableCell>
+                                    </TableRow>
+                                    <!--MoleFrac -->
+                                    <TableRow x:Uid="TableRow_2">
+                                        <TableCell x:Uid="TableCell_4" >
+                                            <Paragraph x:Uid="Paragraph_3">Mole Fraction (
+                                                <Run x:Uid="runMF" x:Name="runMF"/> )
+                                            </Paragraph>
+                                        </TableCell>
+                                        <TableCell x:Uid="TableCell_5" >
+                                            <Paragraph x:Uid="Paragraph_4">
+                                                <Run x:Uid="runMF1" Name="runMF1"></Run>
+                                            </Paragraph>
+                                        </TableCell>
+                                        <TableCell x:Uid="TableCell_6" >
+                                            <Paragraph x:Uid="Paragraph_5">
+                                                <Run x:Uid="runMF2" Name="runMF2"></Run>
+                                            </Paragraph>
+                                        </TableCell>
+                                    </TableRow>
+                                    <!-- Tc -->
+                                    <TableRow x:Uid="TableRow_3">
+                                        <TableCell x:Uid="TableCell_7" >
+                                            <Paragraph x:Uid="Paragraph_6">Tc ( K )</Paragraph>
+                                        </TableCell>
+                                        <TableCell x:Uid="TableCell_8" >
+                                            <Paragraph x:Uid="Paragraph_7">
+                                                <Run x:Uid="runTc1" Name="runTc1"></Run>
+                                            </Paragraph>
+                                        </TableCell>
+                                        <TableCell x:Uid="TableCell_9" >
+                                            <Paragraph x:Uid="Paragraph_8">
+                                                <Run x:Uid="runTc2" Name="runTc2"></Run>
+                                            </Paragraph>
+                                        </TableCell>
+                                    </TableRow>
+                                    <!-- Pc -->
+                                    <TableRow x:Uid="TableRow_4">
+                                        <TableCell x:Uid="TableCell_10" >
+                                            <Paragraph x:Uid="Paragraph_9">Pc ( MPa )</Paragraph>
+                                        </TableCell>
+                                        <TableCell x:Uid="TableCell_11" >
+                                            <Paragraph x:Uid="Paragraph_10">
+                                                <Run x:Uid="runPc1" Name="runPc1"></Run>
+                                            </Paragraph>
+                                        </TableCell>
+                                        <TableCell x:Uid="TableCell_12" >
+                                            <Paragraph x:Uid="Paragraph_11">
+                                                <Run x:Uid="runPc2" Name="runPc2"></Run>
+                                            </Paragraph>
+                                        </TableCell>
+                                    </TableRow>
+                                    <!-- w -->
+                                    <TableRow x:Uid="TableRow_5" >
+                                        <TableCell x:Uid="TableCell_13">
+                                            <Paragraph x:Uid="Paragraph_12">ω</Paragraph>
+                                        </TableCell>
+                                        <TableCell x:Uid="TableCell_14" >
+                                            <Paragraph x:Uid="Paragraph_13">
+                                                <Run x:Uid="runW1" Name="runW1"></Run>
+                                            </Paragraph>
+                                        </TableCell>
+                                        <TableCell x:Uid="TableCell_15" >
+                                            <Paragraph x:Uid="Paragraph_14">
+                                                <Run x:Uid="runW2" Name="runW2"></Run>
+                                            </Paragraph>
+                                        </TableCell>
+                                    </TableRow>
+                                </TableRowGroup>
+                            </Table>
+                            <Paragraph x:Uid="Paragraph_15" >Independent Variable :
+                                <LineBreak x:Uid="LineBreak_1" />
+                                <Run x:Uid="runIV" x:Name="runIV"/>
+                            </Paragraph>
+                            <Paragraph x:Uid="Paragraph_16" >Activity model :
+                                <LineBreak x:Uid="LineBreak_2" />
+                                <Run x:Uid="runActModel" x:Name="runActModel"/>
+                                <LineBreak x:Uid="LineBreak_3" />
+                                <Run x:Uid="runActIndex_1" x:Name="runActIndex_1"/>
+                                <LineBreak x:Uid="LineBreak_4" />
+                                <Run x:Uid="runActIndex_2" x:Name="runActIndex_2"/>
+                            </Paragraph>
+                            <Paragraph x:Uid="Paragraph_17" >Fugacity model :
+                                <LineBreak x:Uid="LineBreak_5" />
+                                <Run x:Uid="runFugModel" x:Name="runFugModel"/>
+                            </Paragraph>
+                            <Paragraph x:Uid="Paragraph_18" >/* ======== Iteration start ======== */</Paragraph>
+                            <Section x:Uid="secItrProc" x:Name="secItrProc" />
+                            <Paragraph x:Uid="Paragraph_19" >/* ======== Iteration finished ======== */
+                                <LineBreak x:Uid="LineBreak_6"/>
+                                <LineBreak x:Uid="LineBreak_7"/> Iteration results :
+                            </Paragraph>
+                            <Section x:Uid="secResult" x:Name="secResult" />
+                        </FlowDocument>
+                    </RichTextBox>
+                </GroupBox>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

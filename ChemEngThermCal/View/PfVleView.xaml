@@ -1,0 +1,94 @@
+﻿<Page x:Uid="Page_1" x:Class="ChemEngThermCal.View.PfVleView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:ccresx="clr-namespace:ChemEngThermCal.Controls;assembly=ChemEngThermCal.Controls" 
+      xmlns:props="clr-namespace:ChemEngThermCal.Properties"
+      mc:Ignorable="d" 
+      Title="VleForPureFluid" Loaded="Page_Loaded">
+    <Grid x:Uid="Grid_1" Margin="25">
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition x:Uid="ColumnDefinition_1" MinWidth="370" Width="Auto"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_2" Width="25"/>
+            <ColumnDefinition x:Uid="ColumnDefinition_3" />
+        </Grid.ColumnDefinitions>
+        <ScrollViewer x:Uid="ScrollViewer_1">
+            <StackPanel x:Uid="StackPanel_1">
+                <GroupBox x:Uid="GroupBox_1" Header="{x:Static props:Resources.mvle_objtitle}" >
+                    <StackPanel x:Uid="StackPanel_2" >
+                        <RadioButton x:Uid="rbtIsobaric" x:Name="rbtIsobaric" Content="{x:Static props:Resources.pvle_isobaric}" Checked="RadioButtonChecked" />
+                        <RadioButton x:Uid="rbtIsothemal" x:Name="rbtIsothemal" Content="{x:Static props:Resources.pvle_isothermal}" Checked="RadioButtonChecked" />
+                        <ccresx:HeaderComboBox x:Uid="hcbFugacity" Header="{x:Static props:Resources.mvle_fugmodel}" x:Name="hcbFugacity" >
+                            <ComboBoxItem x:Uid="ComboBoxItem_1">Redlich - Kwong</ComboBoxItem>
+                            <ComboBoxItem x:Uid="ComboBoxItem_2">Soave - Redlich - Kwong</ComboBoxItem>
+                            <ComboBoxItem x:Uid="ComboBoxItem_3">Peng - Robinson</ComboBoxItem>
+                        </ccresx:HeaderComboBox>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox x:Uid="GroupBox_2" Header="{x:Static props:Resources.cm_chemProp}" >
+                    <StackPanel x:Uid="StackPanel_3">
+                        <Button x:Uid="Button_1" x:Name="DbBtnCon" Content="{x:Static props:Resources.cm_dbCon}" Click="DbBtnCon_Click" />
+                        <ccresx:NumberTextBox x:Uid="ntbTc" x:Name="ntbTc" LeadingContent="Tc =" FollowingContent="K" />
+                        <ccresx:NumberTextBox x:Uid="ntbPc" x:Name="ntbPc" LeadingContent="Pc =" FollowingContent="MPa"/>
+                        <ccresx:NumberTextBox x:Uid="ntbW" x:Name="ntbW" LeadingContent="ω ="/>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox x:Uid="GroupBox_3" Header="{x:Static props:Resources.cm_cdts}">
+                    <StackPanel x:Uid="StackPanel_4">
+                        <ccresx:NumberTextBox x:Uid="ntbT" x:Name="ntbT" LeadingContent="T =" FollowingContent="K" Visibility="Collapsed"/>
+                        <ccresx:NumberTextBox x:Uid="ntbP" x:Name="ntbP" LeadingContent="P =" FollowingContent="MPa" Visibility="Collapsed"/>
+                    </StackPanel>
+                </GroupBox>
+                <StackPanel x:Uid="StackPanel_5" Grid.Row="1">
+                    <Button x:Uid="btnCal" x:Name="btnCal" Content="{x:Static props:Resources.cm_calc}" Style="{DynamicResource CalButtonStyle}" Click="btnCal_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+        <Grid x:Uid="grdResult" x:Name="grdResult" Grid.Column="2" >
+            <Grid.RowDefinitions>
+                <RowDefinition x:Uid="RowDefinition_1" Height="Auto"/>
+                <RowDefinition x:Uid="RowDefinition_2" />
+            </Grid.RowDefinitions>
+            <GroupBox x:Uid="groupBox" x:Name="groupBox" Header="{x:Static props:Resources.cm_rst}" IsEnabled="False" >
+                <StackPanel x:Uid="StackPanel_6">
+                    <ccresx:NumberTextBox x:Uid="ntbResultP" x:Name="ntbResultP" LeadingContent="P =" FollowingContent="MPa" />
+                    <ccresx:NumberTextBox x:Uid="ntbResultT" x:Name="ntbResultT" LeadingContent="T =" FollowingContent="K" />
+                    <ccresx:NumberTextBox x:Uid="ntbResultVV" x:Name="ntbResultVV" LeadingContent="V (vapor) =" FollowingContent="cm³/mol"/>
+                    <ccresx:NumberTextBox x:Uid="ntbResultLV" x:Name="ntbResultLV" LeadingContent="V (liquid) =" FollowingContent="cm³/mol"/>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox x:Uid="GroupBox_4" Header="{x:Static props:Resources.cm_calproc}" Grid.Row="1" Background="{Binding Background, ElementName=groupBox}" >
+                <RichTextBox x:Uid="rtbOutPut" x:Name="rtbOutPut">
+                    <FlowDocument x:Uid="FlowDocument_1" IsOptimalParagraphEnabled="True" PageWidth="2048" >
+                        <Section x:Uid="InitializationText" x:Name="InitializationText">
+                            <Paragraph x:Uid="Paragraph_1" >Input :
+                                <LineBreak x:Uid="LineBreak_1" /> Tc =
+                                <Run x:Uid="runTc" x:Name="runTc"/> K
+                                <LineBreak x:Uid="LineBreak_2" /> Pc =
+                                <Run x:Uid="runPc" x:Name="runPc"/> MPa
+                                <LineBreak x:Uid="LineBreak_3" /> ω =
+                                <Run x:Uid="runOmiga" x:Name="runOmiga"/>
+                                <LineBreak x:Uid="LineBreak_4" />
+                                <LineBreak x:Uid="LineBreak_5" /> Independent Variable :
+                                <LineBreak x:Uid="LineBreak_6" />
+                                <Run x:Uid="runIV" x:Name="runIV"/>
+                            </Paragraph>
+                            <Paragraph x:Uid="Paragraph_2" >Fugacity model :
+                                <LineBreak x:Uid="LineBreak_7" />
+                                <Run x:Uid="runEosType" x:Name="runEosType"/>
+                            </Paragraph>
+                        </Section>
+                        <Paragraph x:Uid="Paragraph_3" >/* ======== Iteration start ======== */</Paragraph>
+                        <Section x:Uid="secItrProc" x:Name="secItrProc" />
+                        <Paragraph x:Uid="Paragraph_4" >/* ======== Iteration finished ======== */
+                            <LineBreak x:Uid="LineBreak_8"/>
+                            <LineBreak x:Uid="LineBreak_9"/> Iteration results :
+                        </Paragraph>
+                        <Section x:Uid="secResult" x:Name="secResult" />
+                    </FlowDocument>
+                </RichTextBox>
+            </GroupBox>
+        </Grid>
+    </Grid>
+</Page>

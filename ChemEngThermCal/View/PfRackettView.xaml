@@ -1,0 +1,61 @@
+﻿<Page x:Uid="Page_1" x:Class="ChemEngThermCal.View.PfRackettView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:ccresx="clr-namespace:ChemEngThermCal.Controls;assembly=ChemEngThermCal.Controls" 
+      xmlns:props="clr-namespace:ChemEngThermCal.Properties"
+      mc:Ignorable="d" 
+      Title="RackettView" Loaded="Page_Loaded">
+    <Grid x:Uid="Grid_1">
+        <Button x:Uid="btnBack" x:Name="btnBack" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnBack_Click" Opacity="0" Background="{DynamicResource uiMediumGraySolidColorBrush}" MinHeight="0" Height="25">
+            <Path x:Uid="PART_Path" x:Name="PART_Path" Data="M5,0 0,5 5,10" Stroke="{DynamicResource uiLightBlueSolidColorBrush}" StrokeThickness="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="16,0,0,0" />
+        </Button>
+        <Grid x:Uid="Grid_2" Margin="25">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition x:Uid="ColumnDefinition_1" MinWidth="370" Width="Auto"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_2" Width="25"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_3" />
+            </Grid.ColumnDefinitions>
+            <ScrollViewer x:Uid="ScrollViewer_1" Grid.RowSpan=" 2">
+                <StackPanel x:Uid="StackPanel_1" >
+                    <GroupBox x:Uid="GroupBox_1" Header="{x:Static props:Resources.cm_exp}">
+                        <Grid x:Uid="Grid_3">
+                            <Grid.RowDefinitions >
+                                <RowDefinition x:Uid="RowDefinition_1" />
+                                <RowDefinition x:Uid="RowDefinition_2" />
+                                <RowDefinition x:Uid="RowDefinition_3" Height="15"/>
+                                <RowDefinition x:Uid="RowDefinition_4" Height="1.5*"/>
+                            </Grid.RowDefinitions>
+                            <RadioButton x:Uid="rbtOmigaExp" x:Name="rbtOmigaExp" Content="{x:Static props:Resources.atn_exp1}" GroupName="exp" Checked="RadioButton_Checked"/>
+                            <RadioButton x:Uid="rbtAlphaBetaExp" x:Name="rbtAlphaBetaExp" Content="{x:Static props:Resources.atn_exp2}" GroupName="exp" Grid.Row="1" Checked="RadioButton_Checked"/>
+                            <Image x:Uid="img" x:Name="img" Grid.Row="4" Width="330" Height="50" Margin="20,0" />
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox x:Uid="GroupBox_2" Header="{x:Static props:Resources.cm_chemProp}">
+                        <StackPanel x:Uid="StackPanel_2" >
+                            <ccresx:NumberTextBox x:Uid="ntbCriticalTemperature" x:Name="ntbCriticalTemperature" LeadingContent="Tc =" FollowingContent="K" />
+                            <ccresx:NumberTextBox x:Uid="ntbCriticalPressure" x:Name="ntbCriticalPressure" LeadingContent="Pc =" FollowingContent="MPa" />
+                            <ccresx:NumberTextBox x:Uid="ntbAcentricFactor" x:Name="ntbAcentricFactor" LeadingContent="ω =" Grid.ColumnSpan="2" Visibility="Collapsed"/>
+                            <ccresx:NumberTextBox x:Uid="ntbAlpha" x:Name="ntbAlpha" LeadingContent="α =" Visibility="Collapsed"/>
+                            <ccresx:NumberTextBox x:Uid="ntbBeta" x:Name="ntbBeta" LeadingContent="β =" Grid.Column="1" Visibility="{Binding Visibility, ElementName=ntbAlpha}" />
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox x:Uid="GroupBox_3" Header="{x:Static props:Resources.cm_cdts}">
+                        <ccresx:NumberTextBox x:Uid="ntbActualTemperature" x:Name="ntbActualTemperature" LeadingContent="T =" FollowingContent="K"/>
+                    </GroupBox>
+                    <Button x:Uid="btnCal" x:Name="btnCal" Content="{x:Static props:Resources.cm_calc}" Click="btnCal_Click" Style="{DynamicResource CalButtonStyle}"/>
+                </StackPanel>
+            </ScrollViewer>
+            <Grid x:Uid="grdResult" x:Name="grdResult" Grid.Column="2" >
+                <StackPanel x:Uid="StackPanel_3" Grid.Row="1">
+                    <GroupBox x:Uid="GroupBox_4" Header="{x:Static props:Resources.cm_rst}" IsEnabled="False" >
+                        <Grid x:Uid="Grid_4">
+                            <ccresx:NumberTextBox x:Uid="ntbSaturatedLiquidVolume" x:Name="ntbSaturatedLiquidVolume" LeadingContent="V(sl) =" FollowingContent="cm³/mol" IsEnabled="False"/>
+                        </Grid>
+                    </GroupBox>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

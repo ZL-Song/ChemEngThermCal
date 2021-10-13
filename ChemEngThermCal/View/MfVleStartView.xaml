@@ -1,0 +1,31 @@
+﻿<Page x:Uid="Page_1" x:Class="ChemEngThermCal.View.MfVleStartView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
+      xmlns:props="clr-namespace:ChemEngThermCal.Properties"
+      mc:Ignorable="d" 
+      Title="VleForMixFluid">
+    <Grid x:Uid="Grid_1" Margin="25">
+        <Grid x:Uid="Grid_2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.RowDefinitions  >
+                <RowDefinition x:Uid="RowDefinition_1" />
+                <RowDefinition x:Uid="RowDefinition_2" Height="10" />
+                <RowDefinition x:Uid="RowDefinition_3" />
+                <RowDefinition x:Uid="RowDefinition_4" Height="10" />
+                <RowDefinition x:Uid="RowDefinition_5" />
+                <RowDefinition x:Uid="RowDefinition_6" Height="10" />
+                <RowDefinition x:Uid="RowDefinition_7" />
+                <RowDefinition x:Uid="RowDefinition_8" Height="80" />
+                <RowDefinition x:Uid="RowDefinition_9" />
+            </Grid.RowDefinitions>
+            <Label x:Uid="Label_1" Content="{x:Static props:Resources.mvlest_title}" FontSize="48" VerticalAlignment="Center" Margin="0,0,0,20" Grid.ColumnSpan="2"/>
+            <Button x:Uid="btnReal" x:Name="btnReal" Content="{x:Static props:Resources.mvlest_real}" Grid.Row="2" Style="{DynamicResource CalButtonStyle}" HorizontalAlignment="Stretch" Click="Button_Click" MaxWidth="350" Grid.ColumnSpan="2" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Margin="0"/>
+            <Button x:Uid="btnSemiIdeal" x:Name="btnSemiIdeal" Content="{x:Static props:Resources.mvlest_semi}" Grid.Row="4" Style="{DynamicResource CalButtonStyle}" HorizontalAlignment="Stretch" Click="Button_Click" MaxWidth="350" Grid.ColumnSpan="2" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Margin="0"/>
+            <Button x:Uid="btnIdeal" x:Name="btnIdeal" Content="{x:Static props:Resources.mvlest_ideal}" Grid.Row="6" Style="{DynamicResource CalButtonStyle}" HorizontalAlignment="Stretch" Click="Button_Click" MaxWidth="350" Grid.ColumnSpan="2" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Margin="0"/>
+            <Label x:Uid="lblReal" x:Name="lblReal" Content="P × φ(i) × y(i) = Ps(i) × φs(i) × γ(i) × x(i)" Grid.Row="8" HorizontalAlignment="Center" />
+            <Label x:Uid="lblSemiIdeal" x:Name="lblSemiIdeal" Content="P × y(i) = Ps(i) × γ(i) × x(i)" Grid.Row="8" HorizontalAlignment="Center" />
+            <Label x:Uid="lblIdeal" x:Name="lblIdeal" Content="P × y(i) = Ps(i) × x(i)" Grid.Row="8" HorizontalAlignment="Center" />
+        </Grid>
+    </Grid>
+</Page>

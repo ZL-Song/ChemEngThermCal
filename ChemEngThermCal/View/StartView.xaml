@@ -1,0 +1,26 @@
+﻿<Page x:Uid="Page_1" x:Class="ChemEngThermCal.View.StartView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:props="clr-namespace:ChemEngThermCal.Properties"
+      mc:Ignorable="d" 
+      Title="StartView">
+    <Grid x:Uid="Grid_1" MinWidth="650" Margin="25">
+        <Grid.RowDefinitions>
+            <RowDefinition x:Uid="RowDefinition_1" Height="Auto"/>
+            <RowDefinition x:Uid="RowDefinition_2" Height="10"/>
+            <RowDefinition x:Uid="RowDefinition_3" />
+            <RowDefinition x:Uid="RowDefinition_4" Height="Auto"/>
+            <RowDefinition x:Uid="RowDefinition_5" Height="10"/>
+            <RowDefinition x:Uid="RowDefinition_6" Height="Auto"/>
+            <RowDefinition x:Uid="RowDefinition_8" Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label x:Uid="Label_1" Content="{x:Static props:Resources.stt_trytab}" Foreground="{DynamicResource uiLightBlueSolidColorBrush}" FontSize="66"/>
+        <Image x:Uid="Image_1" Source="/ChemEngThermCal;component/Resx/Icon/CetcIcon.png" Height="120" Width="120" Grid.Row="3" HorizontalAlignment="Left" Margin="7,0,0,0"/>
+        <Label x:Uid="Label_2" Content="ChemEngThermCal 1.0" Grid.Row="5" FontSize="48"/>
+        <GroupBox x:Uid="GroupBox_1" Header="Powered by" Grid.Row="6" Background="{x:Null}" Margin="6,0,0,0">
+            <Label x:Uid="Label_3" Content="Microsoft .NET Framework 4" Margin="-4,0,0,0"/>
+        </GroupBox>
+    </Grid>
+</Page>
