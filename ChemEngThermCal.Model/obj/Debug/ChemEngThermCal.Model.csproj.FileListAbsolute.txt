@@ -1,0 +1,12 @@
+E:\VisualStudioWorkSpace\ChemEngThermCal\ChemEngThermCal.Model\bin\Debug\ChemEngThermCal.Model.dll
+E:\VisualStudioWorkSpace\ChemEngThermCal\ChemEngThermCal.Model\bin\Debug\ChemEngThermCal.Model.pdb
+E:\VisualStudioWorkSpace\ChemEngThermCal\ChemEngThermCal.Model\bin\Debug\System.Net.Http.dll
+E:\VisualStudioWorkSpace\ChemEngThermCal\ChemEngThermCal.Model\bin\Debug\System.Net.Http.xml
+E:\VisualStudioWorkSpace\ChemEngThermCal\ChemEngThermCal.Model\obj\Debug\ChemEngThermCal.Model.dll
+E:\VisualStudioWorkSpace\ChemEngThermCal\ChemEngThermCal.Model\obj\Debug\ChemEngThermCal.Model.pdb
+E:\VisualStudioWorkSpace\ChemEngThermCal\ChemEngThermCal.Model\obj\Debug\ChemEngThermCal.Model.csprojResolveAssemblyReference.cache
+D:\VisualStudioWorkSpace\ChemEngThermCal\ChemEngThermCal.Model\bin\Debug\ChemEngThermCal.Model.dll
+D:\VisualStudioWorkSpace\ChemEngThermCal\ChemEngThermCal.Model\bin\Debug\ChemEngThermCal.Model.pdb
+D:\VisualStudioWorkSpace\ChemEngThermCal\ChemEngThermCal.Model\obj\Debug\ChemEngThermCal.Model.csprojResolveAssemblyReference.cache
+D:\VisualStudioWorkSpace\ChemEngThermCal\ChemEngThermCal.Model\obj\Debug\ChemEngThermCal.Model.dll
+D:\VisualStudioWorkSpace\ChemEngThermCal\ChemEngThermCal.Model\obj\Debug\ChemEngThermCal.Model.pdb
